@@ -1,0 +1,156 @@
+.overflow {
+  &-hidden {
+    overflow: hidden;
+  }
+  &-visible {
+    overflow: visible;
+  }
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.collapse {
+  overflow: hidden;
+  transition: height var(--collapse-time, #{$tr-time * 2});
+  &.is-collapsed {
+    height: 0;
+  }
+}
+
+.link-cover {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  padding: r(15) r(30) r(16);
+  text-align: center;
+  font-size: r(20);
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+  border: 1px solid var(--border-color);
+  border-radius: r(10);
+  background: var(--bg-color);
+  cursor: pointer;
+
+  &-lightgreen {
+    --text-color: #fff;
+    --border-color: #{$light-green};
+    --bg-color: #{$light-green};
+    &:hover {
+      --border-color: #{$dark-green};
+      --bg-color: #{$dark-green};
+    }
+  }
+
+  &-white-border {
+    --text-color: #fff;
+    --border-color: #fff;
+    --bg-color: #{$light-green};
+    &:hover {
+      --border-color: #{$dark-green};
+      --bg-color: #{$dark-green};
+    }
+  }
+
+  &:not(:disabled) {
+    transition-duration: $tr-time;
+    transition-property: color, border-color, background-color, box-shadow;
+  }
+  &:disabled {
+    pointer-events: none;
+    transition-duration: 0ms;
+    --text-color: transparent;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 93.65vw;
+  padding-left: r(14);
+  padding-right: r(14);
+  @media (max-width: 1279px) {
+    max-width: 100%;
+  }
+}
+
+.link {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.h1 {
+  @include h1;
+}
+
+.h2 {
+  @include h2;
+}
+
+.h3 {
+  @include h3;
+}
+
+.text1 {
+  @include text1;
+}
+
+.text2 {
+  @include text2;
+}
+
+.caption {
+  @include caption;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.darkgreen-color {
+  color: $dark-green;
+}
+
+.lightgreen-color {
+  color: $light-green;
+}
+
+.orange-color {
+  color: $orange;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,106 @@
+:root {
+  scroll-behavior: smooth;
+  font-size: calcFluid(12.8, 15, 320, 370);
+  @media (min-width: 370px) {
+    font-size: 15px;
+  }
+  @media (min-width: 1280px) {
+    font-size: calcFluid(10, 15, 1280, 1920);
+  }
+  @media (min-width: 1920px) {
+    font-size: 15px;
+  }
+}
+body {
+  color: $black;
+  background: #f0f9f8;
+  font-family: "Geologica", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --link-hover-color: #{$light-green};
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ol,
+ul {
+  list-style: none;
+}
+button {
+  border: 0;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+  transition-property: color, background-color, border-color;
+  transition-duration: $tr-time;
+}
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+input {
+  min-width: 0;
+  font-size: inherit;
+  border-radius: 0;
+}
+input[type="file" i],
+input[type="file" i]::-webkit-file-upload-button {
+  cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color $tr-time;
+  &:hover {
+    color: var(--link-hover-color);
+    text-decoration: none;
+  }
+}
+svg {
+  vertical-align: middle;
+  transition: fill $tr-time, stroke $tr-time;
+}
+img {
+  user-select: none;
+}
+img,
+iframe,
+svg,
+picture {
+  display: block;
+}
+iframe {
+  border: 0;
+}
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  font-size: inherit;
+}
+:focus {
+  outline: none;
+}
+main {
+  flex-grow: 1;
+}
+.app-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (max-width: 1279px) {
+}

@@ -1,0 +1,11 @@
+.content-block {
+    &:not(:last-child) {
+        margin-bottom: var(--content-block-margin-bottom);
+    }
+
+    @media (max-width: 1279px) {
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
+}

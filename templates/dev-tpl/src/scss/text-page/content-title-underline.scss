@@ -1,0 +1,15 @@
+.content-title-underline {
+    margin-bottom: var(--heading-margin-bottom);
+    padding-bottom: r(4);
+    font-size: var(--h2-font-size);
+    line-height: 1.2;
+    border-bottom: 2px solid var(--title-underline-border-color);
+}
+
+@media (max-width: 1279px) {
+    .content-title-underline {
+        padding-bottom: r(10);
+        margin-bottom: r(20);
+        font-size: r(22);
+    }
+}

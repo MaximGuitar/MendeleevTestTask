@@ -1,0 +1,22 @@
+{
+	"name": "ps_kuzmin_i/assembling",
+	"type": "project",
+	"autoload": {
+		"psr-4": {
+			"Placestart\\": "libs/"
+		}
+	},
+	"config": {
+		"platform": {
+			"php": "8.2.8"
+		}
+	},
+	"require-dev": {
+		"kint-php/kint": "^4.1"
+	},
+	"require": {
+		"phpmailer/phpmailer": "^6.6",
+		"vlucas/valitron": "^1.4",
+		"league/plates": "^3.5"
+	}
+}

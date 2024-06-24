@@ -1,0 +1,36 @@
+.text-page {
+    // Размер шрифта заголовка h1
+    --h1-font-size: #{r(48)};
+    // Размер шрифта заголовка h2
+    --h2-font-size: #{r(40)};
+    // Размер шрифта заголовка h3
+    --h3-font-size: #{r(32)};
+    // Размер шрифта заголовка h4
+    --h4-font-size: #{r(24)};
+    // Размер шрифта p и li
+    --text-font-size: #{r(16)};
+    // Размер шрифта подписей в галерее
+    --caption-font-size: #{r(14)};
+    --gallery-item-aspect-ratio: 4/3;
+
+    //Отступ после заголовка h1
+    --title-margin-bottom: #{r(40)};
+    //Отступ после заголовков h2,h3,h4
+    --heading-margin-bottom: #{r(20)};
+    //Отступ перед всеми заголовками
+    --heading-margin-top: #{r(50)};
+    //Отступ после p и li
+    --text-margin-bottom: #{r(20)};
+    //Отступ после блоков текстовой страницы
+    --content-block-margin-bottom: #{r(80)};
+    //Промежуток между элементами в галлерее
+    --gallery-grid-gap: #{r(15)};
+
+    //Скругление углов всех изображений
+    --img-border-radius: 0;
+
+    //Цвет посещенной ссылки
+    --visited-link-color: #653465;
+    //Цвет границы заголовка с подчеркиванием
+    --title-underline-border-color: currentColor;
+}

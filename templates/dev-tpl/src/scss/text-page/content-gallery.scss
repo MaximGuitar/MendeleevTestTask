@@ -1,0 +1,27 @@
+.content-gallery {
+    display: grid;
+    gap: var(--gallery-grid-gap);
+
+    &.cols-1 {
+        justify-content: center;
+        grid-template-columns: 77.2%;
+    }
+
+    &.cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1279px) {
+    .content-gallery {
+        gap: r(10);
+    }
+}

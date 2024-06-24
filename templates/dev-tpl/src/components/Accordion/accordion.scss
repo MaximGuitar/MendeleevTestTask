@@ -1,0 +1,47 @@
+@import "@/scss/base/base.scss";
+
+.accordion {
+    border-top: 1px solid #BDBDBD;
+    border-bottom: 1px solid #BDBDBD;
+
+    &__name {
+        flex: 0 0 75%;
+        text-align: left;
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px 14px 20px 0;
+        font-size: 14px;
+        font-weight: 500;
+        color: $green;
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        flex: 0 0 auto;
+        fill: currentColor;
+        transition: transform $tr-time;
+    }
+
+    &__content {
+        padding-bottom: 20px;
+        opacity: 0.7;
+    }
+
+    &.open {
+        .accordion__icon {
+            transform: rotate(45deg);
+        }
+    }
+
+    @media (max-width: 1279px) {
+        &__head {
+            padding: 20px 0;
+        }
+    }
+}

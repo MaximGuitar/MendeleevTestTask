@@ -1,0 +1,79 @@
+<style>
+	.sp-block-my_files .sp-item {
+		padding: 6px;
+		margin: 0 0 5px 0;
+		cursor: move;
+		white-space: nowrap;
+		width: 95%;
+		overflow: hidden;
+		border-bottom: 1px solid #ccc;
+	}
+
+	.sp-block-my_files .sp-item.ui-sortable-helper {
+		background: #ccc;
+	}
+
+	.sp-block-my_files .sp-placeholder {
+		border: 1px dotted black;
+		padding: 6px;
+		margin: 0 0 5px 0;
+		height: 18px;
+	}
+
+	.sp-block-my_files .sp-item-desc {
+		width: 300px;
+	}
+
+	.sp-block-my_files .sp-edit {
+		display: none;
+		background: #ddd;
+		padding: 10px;
+	}
+
+	.sp-block-my_files .sp-x-active {
+		border: 2px solid #d00;
+	}
+
+	.sp-block-my_files .sp-result {
+		background: #eee;
+		min-height: 55px;
+		padding: 5px;
+	}
+
+	.sp-block-my_files .sp-source {
+		background: #ffebc1;
+		display: none;
+		padding: 10px;
+	}
+
+	.sp-block-my_files.sp-show .sp-source {
+		display: block;
+	}
+
+	.sp-block-my_files .sp-download-url {
+		width: 300px;
+	}
+
+	.sp-block-my_files .sp-field {
+		margin-bottom: 10px;
+	}
+</style>
+<div class="sp-field">
+	<span class="sp-x-btn sp-files-toggle">Добавить</span>
+</div>
+<div class="sp-source">
+	<input class="sp-download-url" type="text" placeholder="Скачать файл по ссылке" />
+	<span class="sp-note">или</span>
+	<div class="sp-x-btn sp-x-btn-file">
+		<label>Загрузить</label>
+		<input type="file" name="file[]" multiple="multiple" />
+	</div>
+</div>
+
+<div class="sp-result sp-clear"></div>
+
+<div class="sp-edit sp-clear">
+	<input class="sp-item-desc" type="text" placeholder="Описание" />
+	<span class="sp-note">или</span>
+	<span class="sp-x-btn sp-item-del">Удалить</span>
+</div>

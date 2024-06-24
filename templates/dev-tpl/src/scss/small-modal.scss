@@ -1,0 +1,12 @@
+.small-modal {
+    --container-width: 350px;
+    --container-bg-color: #fff;
+    --close-bg-color: transparent;
+    --close-icon-color: #000;
+
+    .modal {
+        &__container {
+            padding: 20px;
+        }
+    }
+}

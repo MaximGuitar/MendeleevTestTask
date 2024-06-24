@@ -1,0 +1,68 @@
+{
+	"CIBlockSection.Add": {
+		"scope": "php",
+		"prefix": ["CIBlockSectionAdd", "AddSection"],
+		"body": [
+			"\\$rsSection = new CIBlockSection;",
+			"\\$dctFields = array(",
+			"\t'ACTIVE'    => 'Y',",
+			"\t'IBLOCK_ID' => '${1:iblock_id}',",
+			"\t'NAME'      => '${2:name}',",
+			");",
+			"if(!\\$id = \\$rsSection->Add(\\$dctFields)) {",
+			"\techo 'Error:' . \\$rsSection->LAST_ERROR;",
+			"}"
+		],
+		"description": "Добавляет в информационный блок новый раздел."
+	},
+	"CIBlockSection.Delete": {
+		"scope": "php",
+		"prefix": ["CIBlockSectionDel", "DeleteSection"],
+		"body": ["\\\\CIBlockSection::Delete(${1:'SectionID'});"],
+		"description": "Удаляет раздел из информационного блока."
+	},
+	"CIBlockSection.GetByID": {
+		"scope": "php",
+		"prefix": "CIBlockSectionID",
+		"body": [
+			"\\$dctSection = CIBlockSection::GetByID(${1:'SectionID'})->fetch();",
+			"if(is_array(\\$dctSection)) {",
+			"\t${2://body ...}",
+			"}"
+		],
+		"description": "Возвращает параметры раздела по его коду ID."
+	},
+	"CIBlockSection.GetList": {
+		"scope": "php",
+		"prefix": ["CIBlockSectionList", "GetListSection"],
+		"body": [
+			"\\$db_sections = \\\\CIBlockSection::GetList(",
+			"\t['SORT' => 'ASC'],",
+			"\t[",
+			"\t\t'ACTIVE'    => 'Y',",
+			"\t\t'IBLOCK_ID'=> \\$IBLOCK_ID,"
+			"\t],",
+			"\tfalse,",
+			"\t['ID', 'NAME', 'IBLOCK_ID'],",
+			"\tfalse",
+			");",
+			"while(\\$arSection = \\$db_sections->fetch()) {",
+			"\t\\$lstSections[] = \\$arSection;",
+			"}"
+		],
+		"description": "Возвращает список разделов по фильтру."
+	},
+	"CIBlockSection.Update": {
+		"scope": "php",
+		"prefix": "CIBlocSectionUpdate",
+		"body": [
+			"\\$rsSection = new CIBlockSection;",
+			"\\$dctFields = array(",
+			"\t'ACTIVE' => 'Y',",
+			"\t${2://...}",
+			");",
+			"\\$rsIDSection = \\$rsSection->Update(${1:'id'}, \\$dctFields);"
+		],
+		"description": "Изменяет параметры существующего раздела."
+	}
+}

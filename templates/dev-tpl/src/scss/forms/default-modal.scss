@@ -1,0 +1,19 @@
+.default-modal {
+    --close-bg-color: #000;
+    --close-icon-color: #fff;
+    --container-bg-color: #aaa;
+
+    .modal {
+        &__container {
+            max-width: 47%;
+            padding: 30px 40px 40px;
+            border-radius: 15px;
+        }
+
+        &__title {
+            margin-bottom: 31px;
+            font-size: 36px;
+            font-weight: 700;
+        }
+    }
+}

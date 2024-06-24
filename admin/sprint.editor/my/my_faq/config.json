@@ -1,0 +1,10 @@
+{
+  "title": "Вопрос-ответ",
+  "sort": "40",
+  "templates": [
+    "row.html"
+  ],
+  "js": [
+    "/local/admin/sprint.editor/ckeditor/build/ckeditor.js"
+  ]
+}

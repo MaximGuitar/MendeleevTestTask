@@ -1,0 +1,77 @@
+<style>
+	.sp-block-my_image .sp-note {
+		margin: 0 5px;
+	}
+
+	.sp-block-my_image .sp-result {
+		min-height: 210px;
+		overflow: hidden;
+		background: #eee;
+	}
+
+	.sp-block-my_image .sp-result img {
+		display: block;
+		margin: 0 auto;
+		max-width: 98%;
+		height: 210px;
+	}
+
+	.sp-block-my_image .sp-edit {
+		background: #ddd;
+		/*position: absolute;*/
+		/*bottom: 0;*/
+		/*left: 10%;*/
+		/*width: 80%;*/
+		/*border-radius: 10px;*/
+		padding: 10px;
+	}
+
+	.sp-block-my_image .sp-source {
+		background: #ffebc1;
+		/*width: 80%;*/
+		/*border-radius: 10px;*/
+		/*position: absolute;*/
+		/*top:0;*/
+		/*left: 0;*/
+		padding: 10px;
+		/*width: 100%;*/
+	}
+
+	.sp-block-my_image .sp-download-url {
+		width: 300px;
+	}
+
+	.sp-block-my_image .sp-item-text {
+		width: 300px;
+	}
+
+	.sp-block-my_image .sp-source {
+		display: none;
+	}
+
+	.sp-block-my_image .sp-edit {
+		display: block;
+	}
+
+	.sp-block-my_image.sp-show .sp-source {
+		display: block;
+	}
+
+	.sp-block-my_image.sp-show .sp-edit {
+		display: none;
+	}
+</style>
+<div class="sp-source">
+	<input class="sp-download-url" type="text" placeholder="Скачать изображение по ссылке" />
+	<span class="sp-note">или</span>
+	<div class="sp-x-btn sp-x-btn-file">
+		<label>Загрузить</label>
+		<input type="file" name="file" />
+	</div>
+</div>
+<div class="sp-edit">
+	<input placeholder="Описание" class="sp-item-text" type="text" value="{{!it.desc}}" />
+	<span class="sp-note">или</span>
+	<span class="sp-x-btn sp-item-del">Удалить</span>
+</div>
+<div class="sp-result"></div>

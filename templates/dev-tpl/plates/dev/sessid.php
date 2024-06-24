@@ -1,0 +1,1 @@
+<input type="hidden" name="sessid" x-init :value="$sessid">

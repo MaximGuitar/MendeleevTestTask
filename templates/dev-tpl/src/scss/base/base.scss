@@ -1,0 +1,29 @@
+@use "sass:math";
+
+$tr-time: 0.4s;
+
+$green: #264945;
+$white: #fff;
+$red: #A8182F;
+$gray: #F9F9F9;
+
+
+@function calcFluid($f-min, $f-max, $v-min: 320px, $v-max: 1279px) {
+    $k: math.div($f-max - $f-min, $v-max - $v-min);
+    $b: $f-min - $k * $v-min;
+
+    $b: $b * 1px;
+
+    @return calc(#{$k} * 100vw + #{$b});
+}
+
+@function r($sizePX, $baseSizePX: 15) {
+    @return #{math.div($sizePX, $baseSizePX)}rem;
+}
+
+@mixin calcFluid($f-min, $f-max, $property, $v-min: 320, $v-max: 1279) {
+    --k: calc((#{$f-max} - #{$f-min}) / (#{$v-max} - #{$v-min}));
+    --b: calc((#{$f-min} - var(--k) * #{$v-min}) * 1px);
+
+    #{$property}: calc(var(--k) * 100vw + var(--b));
+}

@@ -1,0 +1,35 @@
+.content-text-image {
+    display: grid;
+    align-items: start;
+    justify-content: space-between;
+    grid-template-columns: 45.8% 49.1%;
+
+    .img {
+        width: 100%;
+        border-radius: var(--img-border-radius);
+    }
+
+    &.right-image {
+        .img {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+    }
+
+    @media (max-width: 1279px) {
+        grid-template-columns: 100%;
+        gap: r(20);
+
+        .img {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        &.right-image {
+            .img {
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+        }
+    }
+}

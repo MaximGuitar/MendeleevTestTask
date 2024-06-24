@@ -1,0 +1,25 @@
+<style>
+	.sp-block-my_text_image .image-row {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 30px;
+	}
+	.sp-block-my_text_image .grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px;
+	}
+</style>
+<div class="image-row">
+	<div class="postion-col">
+		<p class="postion">Положение картинки:</p>
+		<select name="image-postion" class="image-postion">
+			<option value="left" selected>Слева</option>
+			<option value="right">Справа</option>
+		</select>
+	</div>
+</div>
+<div class="grid">
+	<div class="text"></div>
+	<div class="image"></div>
+</div>

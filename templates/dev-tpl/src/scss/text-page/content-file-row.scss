@@ -1,0 +1,59 @@
+.content-file-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+
+    .icon {
+        width: r(28);
+        height: r(37);
+        flex: 0 0 auto;
+        fill: currentColor;
+    }
+
+    .name {
+        flex: 1 1 auto;
+        font-size: r(18);
+        line-height: 1.4;
+    }
+
+    .meta {
+        flex: 0 0 17%;
+        padding-right: r(20);
+        margin-left: r(30);
+        font-size: r(18);
+        line-height: 1.4;
+        transition: color $tr-time;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: r(40);
+    }
+}
+
+@media (max-width: 1279px) {
+    .content-file-row {
+        padding: 0;
+
+        .icon {
+            width: r(25);
+            height: r(31);
+        }
+
+        .meta {
+            flex: 1 0 auto;
+            margin-left: r(8);
+            font-size: r(14);
+        }
+
+        .name {
+            margin-top: r(10);
+            flex: 0 0 100%;
+            font-size: r(14);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: r(18);
+        }
+    }
+}
